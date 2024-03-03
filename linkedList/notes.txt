@@ -1,0 +1,15 @@
+void printList()
+
+Node* insertAtBegin(Node* head, int x)
+
+Node* insertAtEnd(Node* head, int x)
+
+Node* insertAtPos(Node* head, int pos, int x)
+
+Node* delHead(Node*head)
+
+Node* delTail(Node* head) 
+
+int search(Node* head, int x)  
+
+int searchRecursive(Node* head, int x)  
