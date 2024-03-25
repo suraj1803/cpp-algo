@@ -19,9 +19,9 @@ private:
     int front;
 
 public:
-    Queue(int capcacity) {
-        arr = new int[capcacity];
+    Queue(int capacity) {
         this->capacity = capacity;
+        arr = new int[capacity];
         count = 0;
         front = -1;
     }
@@ -62,8 +62,10 @@ int main() {
 
     Queue myQueue(5);
     myQueue.enqueue(1);
-    myQueue.dequeue();
+    cout << myQueue.dequeue() << endl;
     myQueue.print();
 
+    myQueue.enqueue(4);
+    myQueue.print();
     return 0;
 }
