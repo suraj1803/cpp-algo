@@ -60,7 +60,6 @@ public:
 
 int main() {
 
-    Queue myQueue(5);
     myQueue.enqueue(1);
     cout << myQueue.dequeue() << endl;
     myQueue.print();
