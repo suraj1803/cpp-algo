@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-/*
-    enqueue(x) -> adds x to the end
+/*x
+    enqueue() -> adds x to the end
     dequeue() -> remove item from the start
     size() -> returns no of items in queue
     getFront() -> returns the front element 
@@ -56,15 +56,37 @@ public:
             cout << arr[i] << " ";
         cout << endl;
     }
+
+    int size() {
+        return count - front;
+    }
+
+    int getFront() {
+        if (isEmpty())
+            cout << "[ERROR] : No elements in queue" << endl;
+        return arr[front];
+    }
+
+    int getRear() {
+        if (isEmpty())
+            cout << "[ERROR] : No elements in queue" << endl;
+        return arr[count - 1];
+    }
+
+    bool isEmpty() {
+        return count == 0;
+    }
+
+    bool isFull() {
+        return count == capacity;
+    }
 };
 
 int main() {
 
+    Queue myQueue(5);
     myQueue.enqueue(1);
-    cout << myQueue.dequeue() << endl;
-    myQueue.print();
-
-    myQueue.enqueue(4);
-    myQueue.print();
+    myQueue.dequeue();
+    cout << myQueue.getFront() << endl;
     return 0;
 }
