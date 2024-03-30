@@ -42,7 +42,7 @@ public:
         size++;
     }
 
-    // removing elements front the front
+    // removing elements from the front
     int dequeue() 
     {
         if (size == 0)
@@ -84,7 +84,7 @@ public:
     {
         if (front > rear) 
         {
-            for (int i = front; i <= capacity; i++)
+            for (int i = front; i < capacity; i++)
                 cout << arr[i] << " ";
             
             for (int i = 0; i <= rear; i++)
@@ -103,6 +103,13 @@ public:
 
 int main()
 {
-
+    Queue myQueue(3);
+    myQueue.enqueue(1);
+    myQueue.enqueue(2);
+    myQueue.enqueue(3);
+    myQueue.dequeue();
+    myQueue.enqueue(4);
+    // cout << myQueue.getFront() << " " << myQueue.getRear() << endl;
+    myQueue.print();
     return 0;
 }
