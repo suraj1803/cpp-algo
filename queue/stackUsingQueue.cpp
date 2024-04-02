@@ -44,7 +44,7 @@ public:
 
     bool isEmpty()
     {
-        return q1.
+        return q1.empty();
     }
 };
 
