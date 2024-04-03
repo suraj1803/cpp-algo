@@ -94,11 +94,11 @@ public:
 
 int main()
 {
-    Queue q;
-    q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(3);
-    q.dequeue();
-    q.print();
+    Queue queue;
+    queue.enqueue(1);
+    queue.print();
+    cout << queue.dequeue() << endl;
+    queue.print();
+
     return 0;
 }
