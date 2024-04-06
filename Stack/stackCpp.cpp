@@ -9,6 +9,7 @@ int main()
     s.push(20);
     cout << s.size() << endl;
     cout << s.top() << endl;
+   
     string s;
     return 0;
 }
