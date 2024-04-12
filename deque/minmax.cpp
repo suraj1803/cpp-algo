@@ -9,8 +9,8 @@
     6. extractMin() --> removes the smallest number
 */
 
-#include <deque>
 #include <iostream>
+#include <deque>
 using namespace std;
 
 class MyDS {
