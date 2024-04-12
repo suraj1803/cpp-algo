@@ -9,10 +9,72 @@
     6. extractMin() --> removes the smallest number
 */
 
+#include <deque>
 #include <iostream>
+using namespace std;
 
-int main () {
-    
-    
+class MyDS {
+private:
+    deque<int> d;
+
+public:
+    void insertMin(int x) {
+        if (d.empty()) {
+            d.push_front(x);
+        }
+
+        if (x >= d.front()) {
+            return;
+        }
+
+        d.push_front(x);
+    }
+
+    void insertMax(int x) {
+        if (d.empty()) {
+            d.push_back(x);
+        }
+
+        if (x < d.back()) {
+            return;
+        }
+
+        d.push_back(x);
+    }
+
+    int extractMin() {
+        if (d.empty()) {
+            return -1;
+        }
+
+        int item = getMin();
+        d.pop_front();
+        return item;
+    }
+
+    int extactMax() {
+        if (d.empty()) {
+            return -1;
+        }
+
+        int item = getMax();
+        d.pop_back();
+        return item;
+    }
+
+    int getMin() { return d.front(); }
+
+    int getMax() { return d.back(); }
+};
+
+int main() {
+
+    MyDS m;
+    m.insertMin(3);
+    m.insertMax(4);
+    m.insertMax(2);
+
+    cout << m.getMin() << " " << m.getMax() << endl;
+
     return 0;
 }
