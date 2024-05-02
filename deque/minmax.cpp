@@ -62,9 +62,13 @@ public:
         return item;
     }
 
-    int getMin() { return d.front(); }
+    int getMin() {
+        return d.front();
+    }
 
-    int getMax() { return d.back(); }
+    int getMax() {
+        return d.back(); 
+    }
 };
 
 int main() {
@@ -72,7 +76,7 @@ int main() {
     MyDS m;
     m.insertMin(3);
     m.insertMax(4);
-    m.insertMax(2);
+    m.insertMin(2);
 
     cout << m.getMin() << " " << m.getMax() << endl;
 
