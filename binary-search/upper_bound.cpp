@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-int lowerBound(vector<int> &arr, int x) {
+int upperBound(vector<int> &arr, int x) {
   int low = 0;
   int high = arr.size() - 1;
 
@@ -12,11 +12,11 @@ int lowerBound(vector<int> &arr, int x) {
   while (low <= high) {
     int mid = low + (high - low) / 2;
     
-    if (arr[mid] >= x) {
+    if (arr[mid] > x) {
       ans = mid;
       high = mid - 1;
     }
-    else if (arr[mid] < x) {
+    else {
       low = mid + 1;
     }
   }
@@ -26,12 +26,9 @@ int lowerBound(vector<int> &arr, int x) {
 
 int main()
 {
-  vector<int> arr = {3, 5, 8, 15, 16};
-  cout << lowerBound(arr, 10) << endl;;
-
-  // c++ stl method 
-  int lb = lower_bound(arr.begin(), arr.end(), 10) - arr.begin();
-  cout << lb << endl;
-
+  vector<int> arr = {1, 2, 3, 10, 14, 19};
+  cout << upperBound(arr, 10) << endl;  
+  int id = upper_bound(arr.begin(), arr.end(), 10) - arr.begin() ;
+  cout << id << endl;
   return 0;
 }
