@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-#include <vector>
+/* #include <vector> */
 using namespace std;
 
 int upperBound(vector<int> &arr, int x) {
