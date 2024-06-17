@@ -2,13 +2,13 @@
 using namespace std;
 
 int csb(int n) {
-  int count = 0;
+  int count = 0; 
   while (n > 0) {
-    if (n & 1)
+    if (n & 1) 
       count++;
     n >>= 1;
   }
-  
+
   return count;
 }
 
@@ -28,7 +28,7 @@ int main()
 {
   int n;
   cin >> n;
-  cout << csbOp(n) << endl;
+  cout << csb(n) << endl;
  
   return 0;
 }
